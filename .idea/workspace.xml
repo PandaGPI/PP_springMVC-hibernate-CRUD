@@ -9,25 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cc03d77-3199-46d2-87be-ad5cbf0303a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pirogov/web/AppInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pirogov/web/DAO/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pirogov/web/DAO/UserDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pirogov/web/config/DBConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pirogov/web/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pirogov/web/controllers/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pirogov/web/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pirogov/web/services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/pirogov/web/services/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/pages/view/users.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/webapp/WEB-INF/web.xml" afterDir="false" />
+    <list default="true" id="5cc03d77-3199-46d2-87be-ad5cbf0303a6" name="Changes" comment="TASK001:&#10;1. Созданы все основные классы&#10;2. Проект запускается&#10;3. Выводится лист юзеров">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/pirogov/web/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/pirogov/web/models/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,13 +46,13 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/GPI/IdeaProjects/Java_PP/PP_2_2_1_spring_hibernate",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.608046",
@@ -178,12 +161,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699985775880</updated>
-      <workItem from="1699985776938" duration="5754000" />
+      <workItem from="1699985776938" duration="6133000" />
     </task>
+    <task id="LOCAL-00001" summary="TASK001:&#10;1. Созданы все основные классы&#10;2. Проект запускается&#10;3. Выводится лист юзеров">
+      <created>1699991765432</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699991765432</updated>
+    </task>
+    <task id="LOCAL-00002" summary="TASK001:&#10;1. Созданы все основные классы&#10;2. Проект запускается&#10;3. Выводится лист юзеров">
+      <created>1699991777512</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699991777512</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="TASK001:&#10;1. Созданы все основные классы&#10;2. Проект запускается&#10;3. Выводится лист юзеров" />
+    <option name="LAST_COMMIT_MESSAGE" value="TASK001:&#10;1. Созданы все основные классы&#10;2. Проект запускается&#10;3. Выводится лист юзеров" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
