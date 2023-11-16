@@ -13,7 +13,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.Objects;
 import java.util.Properties;
@@ -38,7 +37,7 @@ public class DBConfig {
     }
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean() {
+    public LocalContainerEntityManagerFactoryBean getEntityManagerFactoryBean() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
         em.setPackagesToScan(env.getProperty("db.entity.package"));
@@ -50,7 +49,7 @@ public class DBConfig {
     @Bean
     public PlatformTransactionManager platformTransactionManager() {
         JpaTransactionManager tm = new JpaTransactionManager();
-        tm.setEntityManagerFactory(entityManagerFactoryBean().getObject());
+        tm.setEntityManagerFactory(getEntityManagerFactoryBean().getObject());
         return tm;
     }
 

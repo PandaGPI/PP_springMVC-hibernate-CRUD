@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<h2>All Users</h2>
 <div>
     <th:block>
         <table th:border="1">
@@ -14,17 +15,30 @@
                 <th>SurName</th>
                 <th>Age</th>
                 <th>Major</th>
+                <th>Operations</th>
             </tr>
             </thead>
             <tbody>
+
             <tr th:each="usr : ${users}">
                 <td th:text="${usr.getName()}"></td>
                 <td th:text="${usr.getSurName()}"></td>
                 <td th:text="${usr.getAge()}"></td>
                 <td th:text="${usr.getMajor()}"></td>
+                <td>
+                    <form method="get" th:action="@{/updateInfo}" th:object="${usr.id}">
+                        <input type="submit" value="update"/>
+                    </form>
+                </td>
+
             </tr>
             </tbody>
         </table>
+
+        <br>
+
+        <input type="button" value="Add"
+               onclick="window.location = 'add'"/>
     </th:block>
 </div>
 </body>

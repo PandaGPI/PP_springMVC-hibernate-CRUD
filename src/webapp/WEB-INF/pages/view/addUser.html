@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:form="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>User INFO</h2>
+
+
+<form th:action="@{/saveInfo}" th:object="${user}" method="post">
+
+    <div>
+        <input type="hidden" th:field="*{id}"/>
+    </div>
+
+    <div>
+        <label>Name:</label>
+        <input type="text" th:field="*{name}"/>
+    </div>
+    <br>
+    <div>
+        <label>SurName:</label>
+        <input type="text" th:field="*{surName}"/>
+    </div>
+    <br>
+    <div>
+        <label>Age:</label>
+        <input type="number" th:field="*{age}"/>
+    </div>
+    <br>
+    <div>
+        <label>Major:</label>
+        <input type="text" th:field="*{major}"/>
+    </div>
+    <br>
+
+    <input type="submit" value="OK"/>
+</form>
+</body>
+</html>
