@@ -9,26 +9,29 @@ import ru.pirogov.web.models.User;
 import java.util.List;
 
 @Service
+@Transactional
 public class UserServiceImpl implements UserService {
 
     @Autowired
     UserDAO userDAO;
 
     @Override
-    @Transactional
     public void add(User user) {
         userDAO.add(user);
     }
 
     @Override
-    @Transactional
     public List<User> getListUsers() {
         return userDAO.getListUsers();
     }
 
     @Override
-    @Transactional
     public User getUserById(Long id) {
         return userDAO.getUserById(id);
+    }
+
+    @Override
+    public void delete(Long id) {
+        userDAO.delete(id);
     }
 }

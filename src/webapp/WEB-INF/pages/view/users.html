@@ -20,17 +20,24 @@
             </thead>
             <tbody>
 
-            <tr th:each="usr : ${users}">
-                <td th:text="${usr.getName()}"></td>
-                <td th:text="${usr.getSurName()}"></td>
-                <td th:text="${usr.getAge()}"></td>
-                <td th:text="${usr.getMajor()}"></td>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.getName()}"></td>
+                <td th:text="${user.getSurName()}"></td>
+                <td th:text="${user.getAge()}"></td>
+                <td th:text="${user.getMajor()}"></td>
                 <td>
-                    <form method="get" th:action="@{/updateInfo}" th:object="${usr.id}">
+                    <form method="post" th:action="@{/updateInfo}">
+                        <input th:name="id" type="hidden" th:value="${user.getId()}">
                         <input type="submit" value="update"/>
                     </form>
                 </td>
-
+                <td>
+                    <form method="post" th:action="@{/delInfo}">
+                        <input type="hidden" name="_method" value="delete"/>
+                        <input th:name="id" type="hidden" th:value="${user.getId()}">
+                        <input type="submit" value="delete"/>
+                    </form>
+                </td>
             </tr>
             </tbody>
         </table>

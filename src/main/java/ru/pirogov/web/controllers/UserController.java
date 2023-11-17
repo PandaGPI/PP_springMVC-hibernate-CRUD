@@ -39,4 +39,11 @@ public class UserController {
         model.addAttribute("user", user);
         return "view/addUser";
     }
+
+    @RequestMapping("/delInfo")
+    public String deleteUser(@RequestParam("id") Long id) {
+        userService.delete(id);
+        return "redirect:/";
+    }
+
 }

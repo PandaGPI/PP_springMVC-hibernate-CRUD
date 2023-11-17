@@ -9,4 +9,6 @@ public interface UserDAO {
     List<User> getListUsers();
 
     User getUserById(Long id);
+
+    void delete(Long id);
 }
