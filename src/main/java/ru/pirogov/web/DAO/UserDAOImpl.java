@@ -1,5 +1,6 @@
 package ru.pirogov.web.DAO;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import ru.pirogov.web.models.User;
 
@@ -13,6 +14,10 @@ public class UserDAOImpl implements UserDAO{
 
     @PersistenceContext
     EntityManager entityManager;
+
+    public UserDAOImpl(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
 
     @Override
     public void add(User user) {
