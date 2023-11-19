@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.pirogov.web.models.User;
 import ru.pirogov.web.services.UserService;
-import ru.pirogov.web.services.UserServiceImpl;
 
 @Controller
 public class UserController {

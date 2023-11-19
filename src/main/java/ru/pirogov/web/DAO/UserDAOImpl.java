@@ -1,12 +1,12 @@
 package ru.pirogov.web.DAO;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 import ru.pirogov.web.models.User;
 
-import javax.persistence.*;
-import java.util.ArrayList;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
@@ -22,7 +22,7 @@ public class UserDAOImpl implements UserDAO{
 
     @Override
     public List<User> getListUsers() {
-        Query userList = entityManager.createQuery("FROM User");
+        TypedQuery<User> userList = entityManager.createQuery("FROM User", User.class);
         return userList.getResultList();
     }
 
