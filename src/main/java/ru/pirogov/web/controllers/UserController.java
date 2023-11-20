@@ -10,8 +10,13 @@ import ru.pirogov.web.services.UserService;
 @Controller
 public class UserController {
 
-    @Autowired
+
     UserService userService;
+
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/")
     public String allUsers(Model model) {
@@ -32,14 +37,14 @@ public class UserController {
         return "redirect:/";
     }
 
-    @RequestMapping("/updateInfo")
+    @GetMapping("/updateInfo")
     public String updateUser(@RequestParam("id") Long id, Model model) {
         User user = userService.getUserById(id);
         model.addAttribute("user", user);
         return "view/addUser";
     }
 
-    @RequestMapping("/delInfo")
+    @PostMapping("/delInfo")
     public String deleteUser(@RequestParam("id") Long id) {
         userService.delete(id);
         return "redirect:/";

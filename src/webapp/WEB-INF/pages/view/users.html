@@ -23,12 +23,12 @@
         <td th:align="center" th:text="${user.getAge()}"></td>
         <td th:align="center" th:text="${user.getMajor()}"></td>
         <td th:align="center">
-            <form method="post" th:action="@{/updateInfo}">
+            <form method="GET" th:action="@{/updateInfo}">
                 <input th:name="id" type="hidden" th:value="${user.getId()}">
                 <input type="submit" value="update"/>
             </form>
             <br>
-            <form method="post" th:action="@{/delInfo}">
+            <form method="POST" th:action="@{/delInfo}">
                 <input type="hidden" name="_method" value="delete"/>
                 <input th:name="id" type="hidden" th:value="${user.getId()}">
                 <input type="submit" value="delete"/>
