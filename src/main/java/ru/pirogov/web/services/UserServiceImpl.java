@@ -12,7 +12,6 @@ import java.util.List;
 @Transactional
 public class UserServiceImpl implements UserService {
 
-
     UserDAO userDAO;
 
     @Autowired

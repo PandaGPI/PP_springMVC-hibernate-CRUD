@@ -15,9 +15,10 @@ public class UserDAOImpl implements UserDAO{
     @PersistenceContext
     EntityManager entityManager;
 
-    public UserDAOImpl(EntityManager entityManager) {
-        this.entityManager = entityManager;
-    }
+//    @Autowired
+//    public UserDAOImpl(EntityManager entityManager) {
+//        this.entityManager = entityManager;
+//    }
 
     @Override
     public void add(User user) {
