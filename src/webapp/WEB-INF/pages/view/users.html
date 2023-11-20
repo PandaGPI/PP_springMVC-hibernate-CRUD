@@ -6,48 +6,41 @@
 </head>
 <body>
 <h2>All Users</h2>
-<div>
-    <th:block>
-        <table th:border="1">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>SurName</th>
-                <th>Age</th>
-                <th>Major</th>
-                <th>Operations</th>
-            </tr>
-            </thead>
-            <tbody>
 
-            <tr th:each="user : ${users}">
-                <td th:text="${user.getName()}"></td>
-                <td th:text="${user.getSurName()}"></td>
-                <td th:text="${user.getAge()}"></td>
-                <td th:text="${user.getMajor()}"></td>
-            <td>
-                <div>
-                    <form method="post" th:action="@{/updateInfo}">
-                        <input th:name="id" type="hidden" th:value="${user.getId()}">
-                        <input type="submit" value="update"/>
-                    </form>
+<table th:border="1">
+    <tr>
+        <th th:width="200">Name</th>
+        <th th:width="200">SurName</th>
+        <th th:width="200">Age</th>
+        <th th:width="200">Major</th>
+        <th th:width="200">Operations</th>
+    </tr>
+    <tbody>
 
-                    <form method="post" th:action="@{/delInfo}">
-                        <input type="hidden" name="_method" value="delete"/>
-                        <input th:name="id" type="hidden" th:value="${user.getId()}">
-                        <input type="submit" value="delete"/>
-                    </form>
-                </div>
-            </td>
-            </tr>
-            </tbody>
-        </table>
+    <tr th:each="user : ${users}">
+        <td th:align="center" th:text="${user.getName()}"></td>
+        <td th:align="center" th:text="${user.getSurName()}"></td>
+        <td th:align="center" th:text="${user.getAge()}"></td>
+        <td th:align="center" th:text="${user.getMajor()}"></td>
+        <td th:align="center">
+            <form method="post" th:action="@{/updateInfo}">
+                <input th:name="id" type="hidden" th:value="${user.getId()}">
+                <input type="submit" value="update"/>
+            </form>
+            <br>
+            <form method="post" th:action="@{/delInfo}">
+                <input type="hidden" name="_method" value="delete"/>
+                <input th:name="id" type="hidden" th:value="${user.getId()}">
+                <input type="submit" value="delete"/>
+            </form>
+        </td>
 
-        <br>
+    </tr>
+    </tbody>
+</table>
+<br>
 
-        <input type="button" value="Add"
-               onclick="window.location = 'add'"/>
-    </th:block>
-</div>
+<input type="button" value="Add"
+       onclick="window.location = 'add'"/>
 </body>
 </html>
