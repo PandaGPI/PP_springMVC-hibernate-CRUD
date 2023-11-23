@@ -12,7 +12,7 @@ import java.util.List;
 @Transactional
 public class UserServiceImpl implements UserService {
 
-    UserDAO userDAO;
+    private final UserDAO userDAO;
 
     @Autowired
     public UserServiceImpl(UserDAO userDAO) {

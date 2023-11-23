@@ -12,7 +12,7 @@ import java.util.List;
 public class UserDAOImpl implements UserDAO{
 
     @PersistenceContext
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
     @Override
     public void add(User user) {
